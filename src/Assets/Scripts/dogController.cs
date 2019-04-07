@@ -7,10 +7,13 @@ public class dogController : MonoBehaviour
    
     private Rigidbody2D myRigidBody;
     public float jumpForce = 500f;
+    private Animator myAinm;
+
     // Start is called before the first frame update
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
+        myAinm = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,5 +23,6 @@ public class dogController : MonoBehaviour
         {
             myRigidBody.AddForce(transform.up * jumpForce);
         }
+        myAinm.SetFloat("vVelocity", myRigidBody.velocity.y);
     }
 }
