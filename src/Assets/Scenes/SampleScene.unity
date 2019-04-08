@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 89583735}
   - component: {fileID: 89583734}
   - component: {fileID: 89583733}
+  - component: {fileID: 89583736}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -191,6 +192,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &89583736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89583732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea124719277ef46dc8f92bb2a36bc7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &334048797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1231,7 +1244,7 @@ Animator:
   m_GameObject: {fileID: 956669518}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c34eb67a0797c4575bce167475ada5c6, type: 2}
+  m_Controller: {fileID: 9100000, guid: e22a6350de8b249d9a83c6f99f407eea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1429,10 +1442,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1133211038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08d3bb9a50928444982137d0f853d02d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a63bf89e7d554e33aab4038b6dc4ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 6297085238349562248, guid: 590c1f69b66fb47688a4d23106421b9f,
+  prefabToSpawn: {fileID: 6478241103931983989, guid: 200b6b21f08ec40629f687e14f038adb,
     type: 3}
   spawnRate: 1
   randomDelay: 1
