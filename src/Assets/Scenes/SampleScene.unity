@@ -127,7 +127,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
-  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1429,7 +1429,7 @@ GameObject:
   m_Layer: 0
   m_Name: BombSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a63bf89e7d554e33aab4038b6dc4ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 6478241103931983989, guid: 200b6b21f08ec40629f687e14f038adb,
+  prefabToSpawn: {fileID: 6297085238349562248, guid: d6837860949a945d18126869c245e54c,
     type: 3}
   spawnRate: 1
   randomDelay: 1
