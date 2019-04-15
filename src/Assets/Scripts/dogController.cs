@@ -8,11 +8,13 @@ public class dogController : MonoBehaviour
     public float jumpForce = 500f;
     private Animator myAinm;
     public float energyRemained = 100;
+    private bool flag = false;
     // Start is called before the first frame update
     void Start()
     {   
         myRigidBody = GetComponent<Rigidbody2D>();
         myAinm = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -25,29 +27,39 @@ public class dogController : MonoBehaviour
         }
 
         myAinm.SetFloat("vVelocity", myRigidBody.velocity.y);
+        if (flag == true)
+        {
+
+            transform.position = new Vector3(-10, transform.position.y, 0);
+        }
     }
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector3 rot = transform.eulerAngles;
+        flag = false;
+        Vector3 rot = transform.eulerAngles; ;
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             energyRemained -= 30;
             Destroy(collision.gameObject);
+            flag = true;
         }
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Food1"))
         {
             energyRemained += 30;
             Destroy(collision.gameObject);
+            flag = true;
 
         }
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Food2"))
         {
             energyRemained += 50;
             Destroy(collision.gameObject);
-
+            flag = true;
         }
         transform.Rotate(new Vector3(360 - rot.x, 360 - rot.y, 360 - rot.z));
+
     }
 
     private void OnGUI()
