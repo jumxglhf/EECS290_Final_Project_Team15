@@ -32,21 +32,22 @@ public class dogController : MonoBehaviour
         Vector3 rot = transform.eulerAngles;
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            Application.LoadLevel(Application.loadedLevel);
-
+            energyRemained -= 30;
+            Destroy(collision.gameObject);
         }
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Food1"))
         {
             energyRemained += 30;
             Destroy(collision.gameObject);
-            transform.eulerAngles = new Vector3(360-rot.x, 0, 0);
+
         }
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Food2"))
         {
             energyRemained += 50;
             Destroy(collision.gameObject);
-            transform.eulerAngles = new Vector3(360-rot.x, 0, 0);
+
         }
+        transform.Rotate(new Vector3(360 - rot.x, 360 - rot.y, 360 - rot.z));
     }
 
     private void OnGUI()
