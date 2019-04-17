@@ -9,6 +9,7 @@ public class dogController : MonoBehaviour
     private Animator myAinm;
     public float energyRemained = 100;
     private bool flag = false;
+    public AudioSource jumpSounds;
     // Start is called before the first frame update
     void Start()
     {   
@@ -24,13 +25,14 @@ public class dogController : MonoBehaviour
         {
             myRigidBody.AddForce(transform.up * jumpForce);
             energyRemained = energyRemained - 10;
+            jumpSounds.Play();
         }
 
         myAinm.SetFloat("vVelocity", myRigidBody.velocity.y);
         if (flag == true)
         {
 
-            transform.position = new Vector3(-10, transform.position.y, 0);
+            transform.position = new Vector3(-3, transform.position.y, 0);
         }
     }
 
